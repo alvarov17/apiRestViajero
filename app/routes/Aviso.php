@@ -61,7 +61,7 @@ $app->get('/aviso/publicados/{id}', function (Request $request, Response $respon
         } else {
             $json = array("error" => true,
                 "aviso" => "aun no hay avisos publicados");
-            return $response->withStatus(400)->write(json_encode($json));
+            return $response->withStatus(200)->write(json_encode($json));
         }
     } catch (PDOException $e) {
         return $response->write($e);

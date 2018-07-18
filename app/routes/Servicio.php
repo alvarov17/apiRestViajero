@@ -34,3 +34,7 @@ $app->get('/servicio/obtener/{id}', function (Request $request, Response $respon
         return $response->write($e);
     }
 });
+
+$app->post('/servicio/publicar', function (Request $request, Response $response){
+    
+});
